@@ -4,7 +4,6 @@ BatteryData_t SOC_Specification = {
   20.0,            
   80.0,           
   "StateOfCharge",
-  "StateOfCharge"
   };
 
 /**

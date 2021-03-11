@@ -5,7 +5,6 @@ BatteryData_t Temparature_Specification = {
   0.0,            
   45.0,           
   "Temparature",
-  "Temparature"
   };
 
 

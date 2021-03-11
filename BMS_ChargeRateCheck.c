@@ -4,7 +4,6 @@ BatteryData_t ChargeRate_Specification = {
   0.0,            
   0.8,           
   "ChargeRate",
-  "Gebührensatz"
   };
 
 /**

@@ -4,7 +4,7 @@ typedef struct{
     const char* BatteryParticular;
 }BatteryData_t;
 
-void PrintBatteryHealthStatus(BatteryData_t BatteryData, int IndexOfBatteryHealthMessage);
+void PrintBatteryHealthStatus(BatteryData_t BatteryData, int IndexOfBatteryHealthMessage, int language);
 
 int IsTemperatureStable(float Temperature, int language);
 
