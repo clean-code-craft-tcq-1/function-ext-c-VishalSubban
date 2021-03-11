@@ -23,9 +23,9 @@ BatteryData_t Temparature_Specification = {
 int IsTemperatureStable(float Temperature, int language)
 {
     int isTemparaturestable = BATTERY_HEALTH_OK;
-    if(Temperature < (Temparature_Specification.BatteryDataLowerLimit + (0.2 * Temparature_Specification.BatteryDataUpperLimit)) || Temperature > Temparature_Specification.BatteryDataUpperLimit - (0.2 * SOC_Specification.BatteryDataUpperLimit))
+    if(Temperature < (Temparature_Specification.BatteryDataLowerLimit + (0.2 * Temparature_Specification.BatteryDataUpperLimit)) || Temperature > Temparature_Specification.BatteryDataUpperLimit - (0.2 * Temparature_Specification.BatteryDataUpperLimit))
     {
-      isChargeRatestable = BATTERY_HEALTH_ALARM;
+      isTemparaturestable = BATTERY_HEALTH_ALARM;
     }
     if (Temperature<Temparature_Specification.BatteryDataLowerLimit || Temperature>Temparature_Specification.BatteryDataUpperLimit)
     {

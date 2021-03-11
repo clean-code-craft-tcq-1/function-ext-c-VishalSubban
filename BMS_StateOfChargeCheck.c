@@ -23,7 +23,7 @@ int IsSocStable(float SOC, int language)
   int issocstable = BATTERY_HEALTH_OK;
   if(SOC < (SOC_Specification.BatteryDataLowerLimit + (0.2 * SOC_Specification.BatteryDataUpperLimit)) || SOC > SOC_Specification.BatteryDataUpperLimit - (0.2 * SOC_Specification.BatteryDataUpperLimit))
   {
-      isChargeRatestable = BATTERY_HEALTH_ALARM;
+      issocstable = BATTERY_HEALTH_ALARM;
   }
   if(SOC<SOC_Specification.BatteryDataLowerLimit || SOC>SOC_Specification.BatteryDataUpperLimit )
   {
