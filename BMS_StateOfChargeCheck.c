@@ -3,7 +3,8 @@
 BatteryData_t SOC_Specification = {
   20.0,            
   80.0,           
-  "StateOfCharge" 
+  "StateOfCharge",
+  "StateOfCharge"
   };
 
 /**
@@ -18,13 +19,17 @@ BatteryData_t SOC_Specification = {
  * \retval  BATTERY_HEALTH_OK or BATTERY_HEALTH_NOT_OK indicating State of charge status.
  ***************************************************************************************************
  */
-int IsSocStable(float SOC)
+int IsSocStable(float SOC, int language)
 {
   int issocstable = BATTERY_HEALTH_OK;
+  if(SOC < (SOC_Specification.BatteryDataLowerLimit + (0.2 * SOC_Specification.BatteryDataUpperLimit)) || SOC > SOC_Specification.BatteryDataUpperLimit - (0.2 * SOC_Specification.BatteryDataUpperLimit))
+  {
+      isChargeRatestable = BATTERY_HEALTH_ALARM;
+  }
   if(SOC<SOC_Specification.BatteryDataLowerLimit || SOC>SOC_Specification.BatteryDataUpperLimit )
   {
       issocstable = BATTERY_HEALTH_NOT_OK;
   }
-  PrintBatteryHealthStatus(SOC_Specification,issocstable);
+  PrintBatteryHealthStatus(SOC_Specification.BatteryParticular,issocstable, language);
   return issocstable;
 }

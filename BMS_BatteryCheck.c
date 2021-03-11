@@ -16,10 +16,10 @@
  ***************************************************************************************************
  */
 
-int IsBatteryOk(float temperature, float soc, float chargeRate) {
+int IsBatteryOk(float temperature, float soc, float chargeRate, int language) {
   int istemparatureok, issocok, ischargerateok;
-  istemparatureok = IsTemperatureStable(temperature);
-  issocok = IsSocStable(soc);
-  ischargerateok = IschargeRateStable(chargeRate);
+  istemparatureok = IsTemperatureStable(temperature, language);
+  issocok = IsSocStable(soc, language);
+  ischargerateok = IschargeRateStable(chargeRate, language);
   return ( istemparatureok && issocok && ischargerateok);
 }

@@ -2,10 +2,18 @@
 #include "BMS_BatteryCheck.h"
 
 
-const char *BatteryHealthMessage[] =
+const char *BatteryHealthMessage_ENG[] =
 {
     "is Unstable! Take Action Immediately!!!",
     "is Stable"
+    "is approaching unstability !!!"
+};
+
+const char *BatteryHealthMessage_DEU[] =
+{
+    "ist instabil! Sofort handeln!!!",
+    "ist stabil"
+    "nähert sich der Unstabilität!!!"
 };
 
 
@@ -22,7 +30,14 @@ const char *BatteryHealthMessage[] =
 * \retval  None
 ***************************************************************************************************
 */
-void PrintBatteryHealthStatus(BatteryData_t BatteryData, int IndexOfBatteryHealthMessage)
+void PrintBatteryHealthStatus(BatteryData_t BatteryData, int IndexOfBatteryHealthMessage, int language)
 {
-    printf("%s %s \n", BatteryData.BatteryParticular, BatteryHealthMessage[IndexOfBatteryHealthMessage]);
+    if(language == BMS_ENGLISH)
+    {
+        printf("%s %s \n", BatteryData.BatteryParticular, BatteryHealthMessage_ENG[IndexOfBatteryHealthMessage]);
+    }
+    else
+    {
+        printf("%s %s \n", BatteryData.BatteryParticular, BatteryHealthMessage_DEU[IndexOfBatteryHealthMessage]);
+    }
 }
