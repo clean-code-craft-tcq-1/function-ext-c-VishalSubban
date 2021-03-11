@@ -31,6 +31,6 @@ int IsTemperatureStable(float Temperature, int language)
     {
       isTemparaturestable = BATTERY_HEALTH_NOT_OK;
     }
-    PrintBatteryHealthStatus(Temparature_Specification.BatteryParticular,isTemparaturestable, language);
+    PrintBatteryHealthStatus(Temparature_Specification,isTemparaturestable, language);
     return isTemparaturestable;
 }

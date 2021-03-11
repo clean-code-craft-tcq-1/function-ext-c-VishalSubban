@@ -30,6 +30,6 @@ int IschargeRateStable(float chargeRate, int language)
   {
       isChargeRatestable = BATTERY_HEALTH_NOT_OK;
   }
-  PrintBatteryHealthStatus(ChargeRate_Specification.BatteryParticular,isChargeRatestable, language);
+  PrintBatteryHealthStatus(ChargeRate_Specification,isChargeRatestable, language);
   return isChargeRatestable;
 }

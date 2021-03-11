@@ -29,6 +29,6 @@ int IsSocStable(float SOC, int language)
   {
       issocstable = BATTERY_HEALTH_NOT_OK;
   }
-  PrintBatteryHealthStatus(SOC_Specification.BatteryParticular,issocstable, language);
+  PrintBatteryHealthStatus(SOC_Specification,issocstable, language);
   return issocstable;
 }
